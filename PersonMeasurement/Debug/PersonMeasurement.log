@@ -1,0 +1,10 @@
+﻿  CameraCalibration.cpp
+  Main.cpp
+  PersonDetector.cpp
+  PersonMeasurement.cpp
+c:\users\opencv\desktop\git\personmeasurement\personmeasurement\cameracalibration.h(3): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory (compiling source file Main.cpp)
+c:\users\opencv\desktop\git\personmeasurement\personmeasurement\persondetector.h(4): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory (compiling source file PersonDetector.cpp)
+c:\users\opencv\desktop\git\personmeasurement\personmeasurement\cameracalibration.h(3): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory (compiling source file CameraCalibration.cpp)
+c:\users\opencv\desktop\git\personmeasurement\personmeasurement\personmeasurement.h(4): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory (compiling source file PersonMeasurement.cpp)
+  VanishingPointDetector.cpp
+c:\users\opencv\desktop\git\personmeasurement\personmeasurement\vanishingpointdetector.h(4): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory (compiling source file VanishingPointDetector.cpp)

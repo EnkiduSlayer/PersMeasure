@@ -119,11 +119,9 @@ int main(int argc, char* argv[])
 	else
 		cout << "*******Image loaded with success!*******" << std::endl;
 	undist.create(dist.size(), dist.type());
-
-	/*Calibrate Camera with defined calibration*/
-	cc.LoadCalibration("calibration/calibfiles/4kUltra.yml");
-
+	
 	///*Remove distortion from loaded image*/
+	/*Calibrate Camera with defined calibration*/
 	undist = imread("calibration/input/" + in + ".jpg", CV_LOAD_IMAGE_COLOR);
 	if (!undist.data)                              // Check for invalid input
 	{
@@ -136,15 +134,11 @@ int main(int argc, char* argv[])
 	cin >> clb;
 	if (clb == 'y')
 	{
+		cc.LoadCalibration("calibration/calibfiles/4kUltra.yml");
+		cout << "*Calibration matrices were loaded with success!*" << endl;
 		cc.RemoveDistortion(dist, undist);
 		imwrite("calibration/output/UndistortedImag.jpg", undist);
-		if (!imwrite)
-		{
-			cout << "Could not undistort the image!!" << std::endl;
-			return 0;
-		}
-		else
-			cout << "***The image has been undistorted with success!***" << std::endl;
+		cout << "***The image has been undistorted with success!***" << std::endl;
 		cout << "It can be found in 'calibration/output/UndistortedImag.jpg'" << std::endl << std::endl;
 	}
 
