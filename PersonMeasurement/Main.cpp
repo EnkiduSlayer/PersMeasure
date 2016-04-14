@@ -136,6 +136,7 @@ int main(int argc, char* argv[])
 	{
 		cc.LoadCalibration("calibration/calibfiles/4kUltra.yml");
 		cout << "*Calibration matrices were loaded with success!*" << endl;
+		// Undistort the image
 		cc.RemoveDistortion(dist, undist);
 		imwrite("calibration/output/UndistortedImag.jpg", undist);
 		cout << "***The image has been undistorted with success!***" << std::endl;
